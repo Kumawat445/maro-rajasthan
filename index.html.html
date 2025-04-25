@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Maro Rajasthan</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" 
+rel="stylesheet">
+ <style>
+ * {
+ margin: 0;
+ padding:0;
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+ }
+ body {
+ font-family: 'Poppins', sans-serif;
+ background: linear-gradient(to right, #000000cc, #1c1c1ccc), url('BG.JPG') no-repeat center center 
+fixed;
+ background-size: cover;
+ color: white;
+ }
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 50px;
+ background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ }
+ nav .logo h1 {
+ font-size: 30px;
+ color: #00e6a7;
+ }
+ nav .menu a {
+ margin-left: 25px;
+ text-decoration: none;
+ color: white;
+ font-weight: 500;
+ transition: color 0.3s;
+ }
+ nav .menu a:hover {
+ color: #00e6a7;
+ }
+ main {
+ height: 90vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ padding: 0 20px;
+ }
+ section h3 {
+ font-size: 36px;
+ margin-bottom: 10px;
+ text-shadow: 2px 2px 4px #000;
+ }
+ section h1 {
+ font-size: 52px;
+ margin-bottom: 20px;
+ text-shadow: 3px 3px 6px black;
+ }
+ section p {
+ font-size: 20px;
+ margin-bottom: 30px;
+ color: #e0e0e0;
+ }
+ section a {
+ padding: 12px 30px;
+ margin: 10px;
+ border-radius: 30px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ }
+ .btnone {
+ background: #ffffff;
+ color: #000;
+ }
+ .btnone:hover {
+ background: #00e6a7;
+ color: white;
+ }
+ .btntwo {
+ background: #00e6a7;
+ color: white;
+ }
+ .btntwo:hover {
+ background: white;
+ color: #000;
+ }
+ .change_content:after {
+ content: 'Rajsamand';
+ animation: changetext 10s infinite linear;
+ color: #00e6a7;
+ }
+ @keyframes changetext {
+ 0% { content: "Rajsamand";}
+ 5% { content: "Jaipur";}
+ 10% { content: "Jodhpur";}
+ 15% { content: "Udaipur";}
+ 20% { content: "Mount Abu";}
+ 25% { content: "Chittorgarh";}
+ 30% { content: "Bikaner";}
+ 35% { content: "Bharatpur";} 
+ 40% { content: "Alwar";} 
+ 45% { content: "Pali";}
+ }
+ /* Gallery Section */
+ .container {
+ max-width: 1200px;
+ margin: 50px auto;
+ padding: 40px;
+ background-color: rgba(0, 0, 0, 0.4);
+ border-radius: 20px;
+ backdrop-filter: blur(10px);
+ }
+ .container h1 {
+ text-align: center;
+ margin-bottom: 40px;
+ font-size: 40px;
+ color: #00e6a7;
+ }
+ .row {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ gap: 30px;
+ }
+ .card {
+ flex: 1 1 calc(33% - 30px);
+ background: white;
+ color: black;
+ border-radius: 15px;
+ overflow: hidden;
+ transition: transform 0.4s, box-shadow 0.3s;
+ box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+ }
+ .card:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+ }
+ .card img {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ }
+ .card h2 {
+ padding: 10px 15px;
+ font-size: 22px;
+ color: #00b894;
+ }
+ .card p {
+ padding: 0 15px 20px 15px;
+ }
+ /* Signup Section */
+ .signup-section {
+ padding: 50px 20px;
+ max-width: 600px;
+ margin: 50px auto;
+ background-color: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ border-radius: 20px;
+ }
+ .signup-section h2 {
+ text-align: center;
+ margin-bottom: 30px;
+ font-size: 32px;
+ color: #00e6a7;
+ }
+ .signup-section label {
+ display: block;
+ margin-top: 15px;
+ font-weight: 500;
+ }
+ .signup-section input, .signup-section select {
+ width: 100%;
+ padding: 12px;
+ margin-top: 5px;
+ border-radius: 8px;
+ border: none;
+ font-size: 16px;
+ background-color: #f1f1f1;
+ }
+ .signup-section input[type="submit"] {
+ margin-top: 25px;
+ background-color: #00e6a7;
+ color: white;
+ font-weight: 600;
+ cursor: pointer;
+ }
+ .signup-section input[type="submit"]:hover {
+ background-color: #00b894;
+ }
+ @media (max-width: 768px) {
+ .row {
+ flex-direction: column;
+ align-items: center;
+ }
+ .card {
+ width: 90%;
+ }
+ }
+ </style>
+</head>
+<body>
+<main>
+ <section>
+ <h3>WELCOME TO RAJASTHAN</h3>
+ <h1><u><i>COME & VISIT</i></u> <span class="change_content"></span></h1>
+ <p>"BEST TOURIST PLACES IN RAJASTHAN"</p>
+ <a href="#gallery" class="btnone">Learn More</a>
+ <a href="#signup" class="btntwo">Signup</a>
+ </section>
+</main>
+<!-- Gallery Section -->
+<div id="gallery" class="container">
+ <h1>Gallery</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Sign Up - Maro Rajasthan</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ background: url('rajasthan.jpg') no-repeat center center fixed;
+ background-size: cover;
+ margin: 0;
+ padding: 0;
+ }
+ .signup-container {
+ background-color: rgba(255, 255, 255, 0.9);
+ max-width: 400px;
+ margin: 100px auto;
+ padding: 30px;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ }
+ h2 {
+ text-align: center;
+ color: #c94f04;
+ }
+ input[type="text"],
+ input[type="email"],
+ input[type="password"] {
+ width: 100%;
+ padding: 12px;
+ margin: 8px 0 16px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ }
+ input[type="submit"] {
+ width: 100%;
+ background-color: #c94f04;
+ color: white;
+ padding: 14px;
+ border: none;
+ border-radius: 5px;
+ font-size: 16px;
+ cursor: pointer;
+ }
+ input[type="submit"]:hover {
+ background-color: #a83f03;
+ }
+ .login-link {
+ text-align: center;
+ margin-top: 15px;
+ }
+ .login-link a {
+ color: #c94f04;
+ text-decoration: none;
+ }
+ .login-link a:hover {
+ text-decoration: underline;
+ }
+ </style>
+</head>
+<body>
+ <div class="signup-container">
+ <h2>Sign Up</h2>
+ <form action="signup.php" method="post">
+ <input type="text" name="fullname" placeholder="Full Name" required>
+ <input type="email" name="email" placeholder="Email Address" required>
+ <input type="password" name="password" placeholder="Password" required>
+ <input type="submit" value="Register">
+ </form>
+ <div class="login-link">
+ Already have an account? <a href="#">Login here</a>
+ </div>
+ </div>
+</body>
+</html>
+ <label for="country">Country:</label>
+ <select id="country">
+ <option value="">Select a country</option>
+ <option>India</option>
+ <option>USA</option>
+ <option>Canada</option>
+ <option>UK</option>
+ <option>Australia</option>
+ </select>
+ <input type="submit" value="Signup">
+ </form>
+</div>
+</body>
+</html>
+* {
+ margin: 0; padding: 0;box-sizing: border-box;
+}
+body {
+ width: 100%; height: 100vh;
+ background-repeat: no-repeat;-+-+
+ background-size: cover;
+}
+nav {
+ width: 100%; height: 10vh;
+ background: rgba(0,0,0,0.2);
+ color: white; display: flex; justify-content: space-between;
+ font-size:20px;
+ align-items: center; text=transform: uppercase;
+ 
+}
+nav .logo {
+ width: 40%; text-align: center;
+}
+ 
+nav .menu {
+ width: 40%;
+ display: flex; justify-content: space-around;
+ 
+}
+nav .menu a {
+ width: 25%;
+ text-decoration: none; color: white;
+ font-weight: bold;
+}
+nav .menu a:first-child {
+ color: #00b894;
+}
+main{
+ width: 100%;
+ height: 85vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center; color: white;
+ 
+}
+section {
+}
+section h3{
+ font-size: 35px; font-weight: 200; letter-spacing: 3px;
+ text-shadow: 2px 2px 4px black;
+}
+section h1 {
+ margin: 30px 0 20px 0;
+ font-size: 55px;
+ font-weight: 700;
+ text-shadow: 2px 1px 5px black;
+ text-transform: uppercase;
+}
+section p {
+ font-size: 25px;
+ word-spacing: 2px;
+ margin-bottom: 25px;
+ text-shadow: 1px 1px 1px black;
+}
+section a {
+ padding: 12px 30px;
+ border-radius: 4px;
+ outline: none;
+ text-transform: uppercase;
+ font-size: 13px;
+ font-weight: 500;
+ text-decoration: none;
+ letter-spacing: 1px;
+ transition: all .5s ease;
+}
+section .btnone {
+ background: #fff;
+ color: #000;
+}
+.btnone:hover {
+ background: #00b894;
+ color: white;
+}
+section .btntwo {
+ background: #00b894;
+ color: white;
+}
+.btntwo:hover {
+ background: #fff;
+ color: #000;
+}
+.change_content:after {
+ content: '';
+ animation: changetext 10s infinite linear;
+ color: #00b897;
+}
+@keyframes changetext {
+ 0% {content: "Rajsamand";}
+ 20% {content: "Jaipur";}
+ 40% {content: "Jodhpur";}
+ 60% {content: "Udaipur";}
+ 80% {content: "chhitorgarh";}
+ 100% {content: "Mountabu";}
+";}
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Gallery</title>
+ <style>
+ * {
+ box-sizing: border-box;
+ }
+ body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 40px;
+ }
+ .row {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ }
+ .card {
+ width: 30%;
+ margin-bottom: 40px;
+ box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+ transition: transform 0.2s ease-in-out;
+ }
+ .card:hover {
+ transform: scale(1.05);
+ }
+ .card img {
+ width: 100%;
+ height: auto;
+ }
+ .card h2 {
+ text-align: center;
+ padding: 20px;
+ font-size: 24px;
+ font-weight: bold;
+ }
+ .card p {
+ text-align: center;
+ padding: 20px;
+ font-size: 16px;
+ line-height: 1.5;
+ }
+ </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Maro Rajasthan</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', sans-serif;
+ }
+ body {
+ background-colour: ('skyblue'); /*
+ background-size: cover;
+ background-position: center;
+ height: 100vh;
+ color: white;
+ text-align: center;
+ }
+ header {
+ background-color: rgba(0, 0, 0, 0.6);
+ padding: 20px;
+ }
+ .logo {
+ width: 100px;
+ height: auto;
+ }
+ h1 {
+ font-size: 3rem;
+ margin-top: 20px;
+ }
+ p {
+ font-size: 1.2rem;
+ margin-top: 10px;
+ }
+ .btn {
+ margin-top: 20px;
+ padding: 10px 20px;
+ background-color: orange;
+ border: none;
+ border-radius: 5px;
+ color: white;
+ font-weight: bold;
+ cursor: pointer;
+ transition: 0.3s ease;
+ }
+ .btn:hover {
+ background-color: darkorange;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>Maro Rajasthan</h1>
+ <p>RAJASTHAN – THE LAND OF ROYAL HERITAGE & CULTURE</p>
+ <button class="btn">Explore Now</button>
+ </header>
+</body>
+</html>
+</head>
+<body>
+ <div class="container">
+ <h1>Gallery</h1>
+ <div class="row">
+ <div class="card">
+ <img src="rajsamand.jpg" alt="RAJSAMAND">
+ <a href="https://www.tourism.rajasthan.gov.in/rajsamand.html" target="_blank">About</a>
+ <h2>RAJSAMAND</h2>
+ <p>Apart from being quite well known for marble production and being the 
+ largest marble producing district in the country, Rajsamand is also a town 
+ that houses beautiful lakes, awe-inspiring palaces, great historical significance and also a 
+national park.</p>
+ </div>
+ <div class="card">
+ <img src="jaipur.jpg" alt="JAIPUR">
+ <a href="https://www.tourism.rajasthan.gov.in/jaipur.html" target="_blank">About</a>
+ <h2>JAIPUR</h2>
+ <p>Jaipur is a popular tourist destination in India and forms a part of the west golden triangle 
+tourist cicuit along with Delhi and Agra (240 km, 149 mi).</p>
+ </div>
+ <div class="card">
+ <img src="jodhpur.jpg" alt="JODHPUR">
+ <a href="https://www.rajasthantourism.online/jodhpur-tourism.html" target="_blank">About</a>
+ <h2>JODHPUR</h2>
+ <p>Jodhpur, the second largest city in rajasthan is popularly known as the blue city the name is 
+clearly befitting as most of the architecture - forts, palaces, temples, Havelis and even houses are built in 
+vivd sheade of blue.</p>
+ 
+ </div> 
+ <div class="card">
+ <img src="udaipur.jpg" alt="UDAIPUR">
+ <a href="https://www.tourism.rajasthan.gov.in/udaipur.html" target="_blank">About</a>
+ <h2>UDAIPUR</h2> 
+ <p>Udaipur is a beautiful city of lakes Founded by Maharana Udai Singh II in 1559. You will be 
+surprised to know that the lakes are artificial which make you in.</p> 
+ 
+ </div> 
+ <div class="card">
+ <img src="mount.jpg" alt="MOUNT ABU">
+ <a href="https://www.tourism.rajasthan.gov.in/content/rajasthan-tourism/en/touristdestinations/mount-abu.html" target="_blank">About</a>
+ <h2>MOUNT ABU</h2> 
+ <p>Mount Abu, a short distance form jodhur and udaipur, is home to many religious monuments, 
+the most famous being the Dilwara temple, Bramhakumari Ashram, Guru Shikhar and the shrines of 
+jainism. It is a peacefull getway as well as an ideal place for sacred pilgrimage.</p>
+ </div>
+ <div class="card">
+ <img src="chitor.jpg" alt="CHITTORGARH">
+ <a href="https://www.tourism.rajasthan.gov.in/chittorgarh.html" target="_blank">About</a>
+ <h2>CHITTORGARH</h2> 
+ <p>Chhitorgarh is named after its most imposing structure the chhitorgarh fort which stands atop 
+a 180 mitre high hill and is spread across 700 acres. Chhitorgarh fort has had a tumultuous past. This 
+bastion of the Rajputs has faced violent attacks thrice in its entire history.</p>
+ </div> 
+ <div class="card">
+ <img src="bkr.jpg" alt="BIKANER">
+ <a href="https://www.tourism.rajasthan.gov.in/content/rajasthan-tourism/hi/touristdestinations/bikaner.html" target="_blank">About</a>
+ <h2>BIKANER</h2> 
+ <p>Bikaner. ITs is one of the cities in rajasthan that has mainmtained its low-key charm and has 
+recieved the name red city because of the Havelis that are of Red sandstone.</p>
+ 
+ </div> 
+ <div class="card">
+ <img src="bharatpur.jpg" alt="bharatpur">
+ <a href="https://www.tourism.rajasthan.gov.in/bharatpur.html" target="_blank">About</a>
+ <h2>BHARATPUR</h2> 
+ <p>Bharatpur is a city in eastern Rajasthan. Is well known for its wonderfull Unesco-listed 
+Keoladeo National Park, a major bird sanctuary, lies to the southeast. The 18th-century Lohagarh Fort 
+has thick walls and a moat.
+ 
+ </div> 
+ <div class="card">
+ <img src="alwar.jpg" alt="ALWAR">
+ 
+ <a href="https://www.tourism.rajasthan.gov.in/content/rajasthan-tourism/hi/touristdestinations/alwar.html" target="_blank">About</a>
+ <h2>ALWAR</h2> 
+ <p>Alwar has one of the best historical legacies and one of the oldest cities of Rajasthan. It is 
+famous for the Bhangarh Fort, the haunted fort of India, and the milk cake also known as Alwar-kamawa.
+ </div> 
+ <div class="card">
+ <img src="pali.jpg" alt="pali">
+ <a href="https://www.tourism.rajasthan.gov.in/pali.html" target="_blank">About</a>
+ <h2>PALI</h2> 
+ <p>Pali is known for its temples and textiles. The city is named after the Paliwal Brahmins who 
+used to reside here. Ranakpur Temple is a must-visit here.THE CITY OF HILLS
+ 
+ </div> 
+ <div class="card">
+ <img src="dungarpur.jpg" alt="dungarpur">
+ <a href="https://www.tourism.rajasthan.gov.in/dungarpur.html" target="_blank">About</a>
+ <h2>DUNGARPUR</h2> 
+ <p>Dungarpur is a city in the southernmost part of Rajasthan state, India. It is 
+surrounded by hills and is also known as the ‘City of Hills’. Dungarpur is known for its green marble and 
+historical palaces.
+ </div> 
+ <div class="card">
+ <img src="bhilwara.jpg" alt="bhilwara">
+ <a href="https://www.tourism.rajasthan.gov.in/content/rajasthan-tourism/en/touristdestinations/bhilwara.html" target="_blank">About</a>
+ <h2>BHILWARA</h2> 
+ <p>Popularly known as the industrial city of Rajasthan, Bhilwara has been an 
+important centre of textile industries. Bhilwara is believed to have existed since the ancient era and is 
+famous for temples and cultural heritage.
+ </div> 
+ <div class="card">
+ <img src="churu.jpg" alt="churu">
+ <a href="" target="_blank">About</a>
+ <h2>CHURU</h2> 
+ <p>Churu is the gateway to the Thar Desert of Rajasthan. The city is famous for its havelis and 
+fresco paintings. It is located in the north-east part of Rajasthan.
+ </div> 
+ <div class="card">
+ <img src="jhunjhunu.jpg" alt="jhunjhunu">
+ <a href="" target="_blank">About</a>
+ <h2>JHUNJHUNU</h2> 
+ <p>Jhunjhunu is the city in the Shekhawati region of Rajasthan known for beautiful havelis and 
+fresco paintings. The town boasts of several attractions like the Rani Sati Temple, Khetri Mahal, and 
+Badalgarh Fort.
+CHURU.JPG, BHILWARA.JPG, TONK.JPG, JHUNJHUNU.JPG, BANSWARA.JPG, DUNGARPUR.JPG
+html
+Copy
+Edit
